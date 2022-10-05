@@ -1,0 +1,9 @@
+.container {
+  margin-top: 50px;
+}
+
+.chatLayout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 40px;
+}
