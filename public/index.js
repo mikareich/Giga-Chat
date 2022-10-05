@@ -1,11 +1,13 @@
+const ALL_USERNAMES = ["mika", "minh", "marco", "mathis"];
+const userName =
+  ALL_USERNAMES[Math.round(Math.random() * ALL_USERNAMES.length)];
+
 const socket = io();
 
 const messageForm = document.getElementById("messageForm");
 const messageInput = document.getElementById("messageInput");
 const typingContainer = document.getElementById("typing");
 const chatContainer = document.getElementById("messages");
-
-const userName = prompt("What is your name?");
 
 function renderMessage({ user, msg }) {
   const messageContainer = document.createElement("li");
