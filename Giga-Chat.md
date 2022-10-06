@@ -9,5 +9,8 @@
 
 ## Pages
 
-1. [ ] Register
-2. [ ] Global Chat
+1. [ ] Login `/login`
+2. [ ] Register `/register`
+3. [ ] Giga Chat Group `/index` or `/`
+4. [ ] All Chats `/chats`
+5. [ ] Chat/ Group `/chat/:id`
