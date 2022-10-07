@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giga Chat</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="group-layout">
+        <header class="group-layout__header">
+          <h1 class="group-layout__header-title">Giga Chat</h1>
+          <h4 class="group-layout__header-description">
+            The Giga Chat for Giga Chad's
+          </h4>
+        </header>
+        <main class="group-layout__body">
+          <ul class="messages-container" id="messages-container"></ul>
+        </main>
+        <footer class="group-layout__footer">
+          <div class="typing-indicator" id="typing-indicator"></div>
+          <form class="message-form" id="message-form">
+            <input
+              type="text"
+              class="message-form__input"
+              id="message-input"
+              placeholder="Type your message here..."
+              autocomplete="off"
+            />
+            <button type="submit" class="message-form__submit">
+              <span class="message-form__submit-text">Send message</span>
+              <span class="message-form__submit-icon material-symbols-outlined">
+                send
+              </span>
+            </button>
+          </form>
+        </footer>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

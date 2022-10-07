@@ -1,16 +1,26 @@
-# Giga Chat
+# TODO
 
-## Functions
+- [x] CSS moves down when new message
+- [x] Login box / page
 
-- [ ] Send / Receive messages
-- [ ] Is typing
-- [ ] Is online
-- [ ] Name selection
+## Server events
 
-## Pages
+### User connects with a name
 
-1. [ ] Login `/login`
-2. [ ] Register `/register`
-3. [ ] Giga Chat Group `/index` or `/`
-4. [ ] All Chats `/chats`
-5. [ ] Chat/ Group `/chat/:id`
+User is added to users array, if name is not taken
+User is sent a successfulConnection event to get to chat
+Other users are sent a userUpdate event with the new user and an eventMessage event with the new user joining
+
+### User is typing
+
+User sends a userTyping event that actualizes the typing status of the user
+Other users are sent a userUpdate event with the new user typing status
+
+### User sends a message
+
+Message is sent to all users with a message event
+
+### User disconnects
+
+User is removed from users array
+Other users are sent a userUpdate event with the disconnected user and an eventMessage event with the disconnected user leaving
